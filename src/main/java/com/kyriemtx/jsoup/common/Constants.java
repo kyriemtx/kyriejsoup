@@ -93,4 +93,31 @@ public class Constants {
      */
     public static final String RESOURCE_PREFIX = "/profile";
 
+
+    /** 下载文件本地存放路径 **/
+    public static final String LOCAL_PATH = "D:\\浏览器下载\\";
+    /** 本地生成文件存放路径 **/
+    public static final String CREATE_LOCAL_PATH = "D:\\浏览器下载\\本地生成文件\\";
+    /**  文件名前缀 **/
+    public static final String FILE_PRE = "KYRIE_";
+    /**  文件名后缀 **/
+    public static final String FILE_LAST = ".csv";
+
+    /**  SFTP地址 **/
+    public static final String SFTP_HOST = "sftpHost";
+    /**  SFTP端口 **/
+    public static final String SFTP_PORT = "sftpPort";
+    /**  SFTP用户名 **/
+    public static final String SFTP_USER = "sftpUser";
+    /**  SFTP密码 **/
+    public static final String SFTP_PWD = "sftpPwd";
+    /** 解压密码 **/
+    public static final String ZIP_PWD = "zipPassword";
+    /**SFTP服务器待下载文件存放路径**/
+    public static final String SFTP_FILE_PATH = "sftpFilePath";
+
+    /**SFTP服务器待下载文件存放路径**/
+    public static final String SFTP_UPLOAD_PATH = "sftpUploadFilePath";
+
+
 }
