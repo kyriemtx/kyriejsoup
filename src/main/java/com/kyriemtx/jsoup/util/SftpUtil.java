@@ -4,8 +4,6 @@ import com.jcraft.jsch.*;
 import com.kyriemtx.jsoup.common.Constants;
 import com.kyriemtx.jsoup.exception.BizException;
 import lombok.extern.slf4j.Slf4j;
-import net.lingala.zip4j.core.ZipFile;
-import net.lingala.zip4j.exception.ZipException;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
@@ -165,33 +163,6 @@ public class SftpUtil {
         return true;
     }
 
-
-    /**
-     * 解压ZIP文件
-     * @param zipFileName  压缩包文件名
-     * @param unPath     解压到的目标路径
-     * @param password   解压密码
-     */
-    public void unzip(String zipFileName, String unPath, String password) {
-        try {
-            ZipFile zipFile = new ZipFile(zipFileName);
-            zipFile.setFileNameCharset("GBK");
-            if (!zipFile.isValidZipFile()) {
-                throw new ZipException("压缩文件不合法,可能被损坏");
-            }
-            File destDir = new File(unPath);
-            if (destDir.isDirectory() && !destDir.exists()) {
-                destDir.mkdir();
-            }
-            //当压缩包需要密码来解压时，在此设置解压密码
-            if (zipFile.isEncrypted()) {
-                zipFile.setPassword(password.toCharArray());
-            }
-            zipFile.extractAll(unPath);
-        } catch (Exception e) {
-            throw new BizException("解压zip文件失败");
-        }
-    }
 
 
 }

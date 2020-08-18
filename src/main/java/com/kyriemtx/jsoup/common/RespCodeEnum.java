@@ -14,6 +14,10 @@ public enum RespCodeEnum {
     CAPTCHA_NOT_EXIST("100001","验证码不存在或已过期"),
     CAPTCHA_ERROR("100002","验证码有误"),
     LOGIN_ERROR("100003","账号或密码有误"),
+    FILE_NOT_EXIST("100004","文件不存在"),
+    FILE_PARSE_FAILURE("100005","文件解析失败");
+
+
     ;
 
 
